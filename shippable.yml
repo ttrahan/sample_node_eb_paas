@@ -9,7 +9,7 @@ integrations:
   deploy:
     - integrationName: "aws-test"
       type: aws
-      target: ebs_paas
+      target: eb_paas
       platform: "Node.js"
       application_name: sample-node-eb-paas-app
       env_name: sample-node-eb-paas-env
