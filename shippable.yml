@@ -1,0 +1,16 @@
+# Language setting
+language: node_js
+
+# Version number
+node_js:
+  - 0.12
+
+integrations:
+  deploy:
+    - integrationName: "aws-test"
+      type: aws
+      target: ebs_paas
+      platform: "Node.js"
+      application_name: sample-node-eb-paas-app
+      env_name: sample-node-eb-paas-env
+      region: ap-northeast-1
