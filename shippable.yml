@@ -1,9 +1,16 @@
-# Language setting
 language: node_js
 
-# Version number
 node_js:
-  - 0.12
+  - "0.10"
+
+services:
+  - selenium
+
+build:
+    ci:
+      - sudo npm install
+      - export DISPLAY=:99.0
+      - xvfb-run --server-args="-ac" npm test
 
 integrations:
   deploy:
@@ -14,3 +21,4 @@ integrations:
       application_name: sample-node-eb-paas-app
       env_name: sample-node-eb-paas-env
       region: ap-northeast-1
+
