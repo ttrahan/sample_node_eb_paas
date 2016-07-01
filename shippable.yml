@@ -1,0 +1,21 @@
+language: node
+
+node:
+  - 4.3
+
+env:
+  global:
+
+
+build:
+  ci:
+    - SUDO=$(which sudo) && $SUDO pip install awsebcli
+
+  after-success:
+    - ./prepare-build-folder.sh
+    - cd build
+    - ls
+    - eb init sample_node_eb_paas -r us-east-1 -p node.js
+    - ls
+    - cat ~/.aws/credentials
+    #- eb deploy sampleNodeEbPaas-env -r us-east-1
