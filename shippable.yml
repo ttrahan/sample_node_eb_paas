@@ -12,7 +12,7 @@ build:
     - SUDO=$(which sudo) && $SUDO pip install awsebcli
 
   on_success:
-    - ./prepare-build-folder.sh
+    - ./prepare_build_folder.sh
     - cd build
     - ls
     - eb init sample_node_eb_paas -r us-east-1 -p node.js
