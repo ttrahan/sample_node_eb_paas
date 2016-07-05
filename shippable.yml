@@ -10,6 +10,7 @@ env:
 build:
   ci:
     - SUDO=$(which sudo) && $SUDO pip install awsebcli
+    - $SUDO pip install --upgrade botocore
 
   on_success:
     - ./prepare_build_folder.sh
