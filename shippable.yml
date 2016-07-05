@@ -1,6 +1,6 @@
-language: node
+language: nodejs
 
-node:
+nodejs:
   - 4.3
 
 env:
