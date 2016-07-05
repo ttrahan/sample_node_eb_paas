@@ -10,12 +10,11 @@ env:
 build:
   ci:
     - SUDO=$(which sudo) && $SUDO pip install awsebcli
+    - cat
 
   after-success:
     - ./prepare-build-folder.sh
     - cd build
     - ls
     - eb init sample_node_eb_paas -r us-east-1 -p node.js
-    - ls
-    - cat ~/.aws/credentials
-    #- eb deploy sampleNodeEbPaas-env -r us-east-1
+    - eb deploy sampleNodeEbPaas-env -r us-east-1
