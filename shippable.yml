@@ -19,9 +19,9 @@ build:
     - eb init --profile default sample_node_eb_paas -r us-east-1 -p node.js
     - eb deploy sampleNodeEbPaas-env -r us-east-1
 
-  post_ci:
-    - docker commit $SHIPPABLE_CONTAINER_NAME 288971733297.dkr.ecr.us-east-1.amazonaws.com/debug:latest
-    - docker push 288971733297.dkr.ecr.us-east-1.amazonaws.com/debug:latest
+  # post_ci:
+  #   - docker commit $SHIPPABLE_CONTAINER_NAME 288971733297.dkr.ecr.us-east-1.amazonaws.com/debug:latest
+  #   - docker push 288971733297.dkr.ecr.us-east-1.amazonaws.com/debug:latest
 
 integrations:
   hub:
