@@ -10,9 +10,8 @@ env:
 build:
   ci:
     - SUDO=$(which sudo) && $SUDO pip install awsebcli
-    - cat
 
-  after-success:
+  on_success:
     - ./prepare-build-folder.sh
     - cd build
     - ls
