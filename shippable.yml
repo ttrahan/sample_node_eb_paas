@@ -16,7 +16,7 @@ build:
     - ./prepare_build_folder.sh
     - cd build
     - ls
-    - eb init sample_node_eb_paas -r us-east-1 -p node.js
+    - eb init --profile default sample_node_eb_paas -r us-east-1 -p node.js
     - eb deploy sampleNodeEbPaas-env -r us-east-1
 
   post_ci:
